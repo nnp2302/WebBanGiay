@@ -4,6 +4,14 @@
     --primary-color :rgb(189, 139, 46);
     --secordary-color:rgb(207, 177, 6);
     --function-color:#272d40;
+
+    /* Card variables */
+    --card-font-size:25px;
+    --card-border-radius:15px;
+    --card-item-width:320px;
+    --card-item-height:400px;
+    --card-item-padding:20px;
+    /* End Card variables */
 }
 /* width */
 ::-webkit-scrollbar {
@@ -48,11 +56,11 @@ body{
 }  
 .card__item{
     margin:100px auto 0px auto;
-    width: 320px;
-    height: 400px;
-    background:#272d40;
-    padding:20px;
-    border-radius: 15px;
+    width: var(--card-item-width);
+    height: var(--card-item-height);
+    background:var(--function-color);
+    padding:var(--card-item-padding);
+    border-radius: var(--card-border-radius);
     color: white;
     position: relative;
 }
@@ -163,4 +171,14 @@ body{
 }
 .card__action button:hover{
     transform: scale(90%);
+}
+
+@media only screen and (max-width:1920px){
+    :root{
+        --card-item-width:240px;
+        --card-item-height:360px;
+    }
+}
+@media screen {
+    
 }
